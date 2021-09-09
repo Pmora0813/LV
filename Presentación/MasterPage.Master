@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Presentación.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Prueba técnica</title>
+
+    <%-- Se llama al style y al bootstrap css --%>
+    <link href="www/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="www/css/Style.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <nav class="navbar navbar-expand-md bg-light navbar-light">
+                <a class="navbar-brand nav-link"  ID="inicio" runat="server" href="Default.aspx">Inicio</a>
+
+                <%-- boton para el responsivo  --%>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">  
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <%-- nav --%>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <%-- vehiculos --%>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="AgregarVehiculos.aspx">Vehiculos</a>
+                        </li>
+                        <%-- vehiculos --%>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="AgregarServicio.aspx">Servicios</a>
+                        </li>
+                        <%-- servicios --%>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="AsignarServicio.aspx">Asignar Servicio</a>
+                        </li>
+                        <%-- reportes --%>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="ReporteServicios.aspx">Reportes de Servicios</a>
+                        </li>
+                    </ul>
+                </div>
+                </nav>
+            </header>
+                
+
+            
+            <div class="text-center">
+                <img src="www/css/Imagenes/lava.png" class="img-fluid" style="width:300px" />
+            </div>
+            <div class="text-center">
+                <h1>Lavar Quirós</h1>
+            </div>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer class="bg-light"> <%--inicio del footer--%>
+                
+                <div class="footer-copyright text-center py-3">© 2021
+                    <a > Todos los Derechos Reservados</a>
+                </div>
+            </footer>
+
+            
+        </div>
+    </form>
+    
+</body>
+
+    <%-- Se llama al jquery y al bootstrap js --%>
+    <script src="www/js/jquery-3.3.1.min.js"></script>
+    <script src="www/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</html>
