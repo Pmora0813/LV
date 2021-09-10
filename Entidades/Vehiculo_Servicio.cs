@@ -20,6 +20,6 @@ namespace Entidades
         public virtual Servicios Servicios { get; set; }
 
         public virtual Vehiculo Vehiculo { get; set; }
-        //Hola 
+        //Hola  mundo
     }
 }
